@@ -1,212 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-.res {
-    display: flex;
-    align-items: center;
+header {
+    background: linear-gradient(135deg, #6b48ff, #00ddeb);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.row {
-    padding: 0 15px;
-    min-height: 100vh;
-    justify-content: center;
-    background: #f0f2f5;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.fb-form {
-    justify-content: space-between;
-    max-width: 1000px;
-    width: 100%;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.fb-form .card {
-    margin-bottom: 90px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.fb-form h1 {
-    color: #1877f2;
-    font-size: 4rem;
-    margin-bottom: 10px;
+nav ul li a:hover {
+    color: #ffeb3b;
 }
 
-.fb-form p {
-    font-size: 1.75rem;
-    white-space: nowrap;
+.intro h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #6b48ff;
+    font-size: 2em;
+    text-align: center;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    gap: 10px;
     max-width: 400px;
-    width: 100%;
+    margin: 20px auto;
 }
 
-form input {
-    height: 55px;
-    width: 100%;
+input, textarea {
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    padding: 0 14px;
+    border-radius: 5px;
 }
 
-form input:focus {
-    outline: none;
-    border-color: #1877f2;
-}
-
-::placeholder {
-    color: #777;
-    font-size: 1.063rem;
-}
-
-.fb-submit {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-}
-
-.fb-submit .login {
+button {
+    padding: 10px;
+    background-color: #6b48ff;
+    color: white;
     border: none;
-    outline: none;
+    border-radius: 5px;
     cursor: pointer;
-    background: #1877f2;
-    padding: 15px 0;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 1.25rem;
-    font-weight: 600;
-    transition: 0.2s ease;
 }
 
-.fb-submit .login:hover {
-    background: #0d65d9;
+button:hover {
+    background-color: #00ddeb;
 }
 
-form a {
-    text-decoration: none;
-}
-
-.fb-submit .forgot {
-    color: #1877f2;
-    font-size: 0.875rem;
-}
-
-.fb-submit .forgot:hover {
-    text-decoration: underline;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #ccc;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.button {
-    margin-top: 25px;
+footer {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.button a {
-    padding: 15px 20px;
-    background: #42b72a;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 1.063rem;
-    font-weight: 600;
-    transition: 0.2s ease;
-}
-
-.button a:hover {
-    background: #3ba626;
-}
-
-.footer-langs {
-    max-width: 1000px;
-    margin: 0 auto;
     padding: 20px;
-}
-
-footer ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 8px 0;
-
-    margin-left: 3vh;
-}
-
-footer ol:first-child {
-    border-bottom: 1px solid #dddfe2;
-}
-
-footer ol:first-child li:last-child button {
-    background-color: #f5f6f7;
-    border: 1px solid #ccd0d5;
-    outline: none;
-    color: #4b4f56;
-    padding: 0 8px;
-    font-weight: 700;
-    font-size: 12px;
-}
-
-footer ol li {
-    padding-right: 20px;
-    font-size: 12px;
-    color: #8a8d91;
-}
-
-footer ol li a {
-    text-decoration: none;
-    color: #8a8d91;
-}
-
-footer ol li a:hover {
-    text-decoration: underline;
-}
-
-footer small {
-    font-size: 12px;
-    color: #8a8d91;
-    margin-left: 3vh;
-}
-
-@media (max-width: 900px) {
-    .fb-form {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .fb-form .card {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 460px) {
-    .fb-form h1 {
-        font-size: 3.5rem;
-    }
-
-    .fb-form p {
-        font-size: 1.3rem;
-    }
-
-    form {
-        padding: 15px;
-    }
+    background-color: #333;
+    color: white;
 }
